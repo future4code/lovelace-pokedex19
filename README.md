@@ -1,7 +1,7 @@
 # POKEDEX
 
 Nome dos integrantes: 
-- Pessoa 1
+- José Henrique de Holanda Cavalcanti
 - Pessoa 2
 - Pessoa 3
 
