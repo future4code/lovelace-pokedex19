@@ -1,13 +1,10 @@
 import React from 'react';
-import Header from './Components/Header/Header';
-import Footer from './Components/Footer/Footer';
-//import styled from 'styled-components';
+import RouteManager from './route/Router';
 
 function App() {
   return (
     <container>
-    <Header/>
-      <Footer />
+      <RouteManager />
     </container>
   );
 }

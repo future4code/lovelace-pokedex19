@@ -1,8 +1,8 @@
 
 Nome dos integrantes: 
 - José Henrique de Holanda Cavalcanti
-- Pessoa 2
-- Pessoa 3
+- Ana Beatriz de Moraes Dias
+- Evai da Silva Santos
 
 
 
