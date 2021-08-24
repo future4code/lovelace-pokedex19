@@ -13,11 +13,9 @@ export const Button = styled.button`
   font-size: 15px;
   font-family: sans-serif;
   color: #8B0000;
-  padding: 0.5em 1em;
-  outline: none;
+  padding: 0.7em 2em;
   margin-right: 50px;
   background-color: #F1362F;
-  overflow: hidden;
   block-size: fit-content
 
 `
