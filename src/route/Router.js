@@ -1,8 +1,8 @@
 import { Switch, Route, BrowserRouter } from "react-router-dom";
-import HomePage from "../../pages/HomePage/"
-import PokedexPage from "../../pages/PokedexPage"
-import PokemonDetailsPage from "../../pages/HomePage/";
-import ErrorPage from "../../pages/ErrorPage"
+import ErrorPage from "../pages/ErrorPage"
+import HomePage from "../pages/HomePage"
+import PokedexPage from "../pages/PokedexPage"
+import PokemonDetailsPage from "../pages/PokemonDetailsPage";
 
 export default function RouteManager() {
     return (
@@ -16,7 +16,7 @@ export default function RouteManager() {
                     <PokedexPage />
                 </Route>
 
-                <Route exact path={"/pokemon/:id"}>
+                <Route exact path={"/detalhes/:nome"}>
                     <PokemonDetailsPage />
                 </Route>
 

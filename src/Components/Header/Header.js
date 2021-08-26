@@ -1,6 +1,6 @@
 import React from 'react'
-import { goToPokedex } from '../../route/Coordinator';
-import {HeaderContainer, Button, LogoPokemon} from './Styled';
+import { goToHomePage, goToPokedex } from '../../route/Coordinator';
+import { HeaderContainer, Button, LogoPokemon } from './Styled';
 import { useHistory } from "react-router-dom";
 
 
@@ -9,9 +9,12 @@ const Header = () => {
 
     return (
         <HeaderContainer>
-            <LogoPokemon src='https://bit.ly/388wq4W' alt='Pokemon-Logo' />  
+            <LogoPokemon src='https://bit.ly/388wq4W' alt='Pokemon-Logo' />
             <h1>Lista de Pokemons</h1>
-            <Button onClick={() => goToPokedex(history)}>Ir para Pokedex</Button>
+            <div>
+                <Button onClick={() => goToPokedex(history)}>Ir para Pokedex</Button>
+                <Button onClick={() => goToHomePage(history)}>Ir para HomePage</Button>
+            </div>
         </HeaderContainer>
     )
 }
