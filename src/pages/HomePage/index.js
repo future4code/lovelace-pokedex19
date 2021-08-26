@@ -2,11 +2,12 @@ import React from 'react'
 import { useHistory } from 'react-router-dom'
 // import { CardPokemon } from '../../Components/CardPokemon'
 import Header from "../../Components/Header/Header"
+import { BASE_URL } from '../../constants/BASE_URL'
 import useRequestData from '../../hooks/request'
 import { goToPokemonDetailPage } from "../../route/Coordinator"
 
 const PokemonListPage = (props) => {
-    const pokemonsList = useRequestData("https://pokeapi.co/api/v2/pokemon", {});
+    const pokemonsList = useRequestData(`${BASE_URL}`, {});
     const history = useHistory();
 
     const pokemonsComponents =

@@ -2,13 +2,14 @@ import React from "react";
 import { useHistory, useParams } from "react-router-dom";
 import useRequestData from "../../hooks/request";
 import Header from "../../Components/Header/Header";
+import { BASE_URL } from "../../constants/BASE_URL";
 
 const PokemonDetailPage = () => {
   const params = useParams();
   const history = useHistory();
 
   const pokemon = useRequestData(
-    `https://pokeapi.co/api/v2/pokemon/${params.nome}`,
+    `${BASE_URL}/${params.nome}`,
     {}
   );
 
