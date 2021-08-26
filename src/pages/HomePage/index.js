@@ -2,11 +2,13 @@ import React from 'react'
 import { useHistory } from 'react-router-dom'
 // import { CardPokemon } from '../../Components/CardPokemon'
 import Header from "../../Components/Header/Header"
+import Footer from "../../Components/Footer/Footer"
 import useRequestData from '../../hooks/request'
 import { goToPokemonDetailPage } from "../../route/Coordinator"
+import { BASE_URL } from '../../constants/BASE_URL'
 
 const PokemonListPage = (props) => {
-    const pokemonsList = useRequestData("https://pokeapi.co/api/v2/pokemon", {});
+    const pokemonsList = useRequestData(`${BASE_URL}`, {});
     const history = useHistory();
 
     const pokemonsComponents =
@@ -26,10 +28,7 @@ const PokemonListPage = (props) => {
         <body>
             {pokemonsComponents}
         </body>
-        <footer>
-            <h1>footer</h1>
-        </footer>
-
+        <Footer />
     </div>;
 };
 

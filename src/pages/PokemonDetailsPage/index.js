@@ -2,13 +2,15 @@ import React from "react";
 import { useHistory, useParams } from "react-router-dom";
 import useRequestData from "../../hooks/request";
 import Header from "../../Components/Header/Header";
+import Footer from "../../Components/Footer/Footer";
+import { BASE_URL } from "../../constants/BASE_URL";
 
 const PokemonDetailPage = () => {
   const params = useParams();
   const history = useHistory();
 
   const pokemon = useRequestData(
-    `https://pokeapi.co/api/v2/pokemon/${params.nome}`,
+    `${BASE_URL}/${params.nome}`,
     {}
   );
 
@@ -24,6 +26,7 @@ const PokemonDetailPage = () => {
         <img src={pokemon.sprites.front_default} />
       )}
       <button onClick={goToListPage}>Voltar</button>
+      <Footer />
     </div>
   );
 };
