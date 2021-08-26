@@ -1,12 +1,14 @@
 import React from 'react'
+import Header from '../../Components/Header/Header'
 
- const HomePage = () => {
+ const ErrorPage = () => {
 
     return (
         <div>
-            <h1>HomePage</h1>
+            <Header />
+            <h1>Error</h1>
         </div>
     )   
  }
 
- export default HomePage
+ export default ErrorPage
