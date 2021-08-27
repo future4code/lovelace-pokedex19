@@ -8,7 +8,7 @@ const Footer = () => {
     <FooterContent>
         <LogoDiv>
             <Logo src={"https://bit.ly/3wD8P6d"} />
-            <p><b>Projeto desenvolvido por:</b></p><p> José Henrique Holanda Cavalcanti <br/> Ana Beatriz de Morais Dias <br/> Evai da silva Santos
+            <p><b>Projeto desenvolvido por:</b></p><p> José Henrique Holanda Cavalcanti <br/> Ana Beatriz de Morais Dias <br/> Evai da Dilva Santos
  </p>
         </LogoDiv>
         <NameDiv>
