@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from "axios"
 import GlobalStateContext from './GlobalStateContext'
 import { BASE_URL } from '../constants/urls'
@@ -13,40 +13,42 @@ const GlobalState = (props) => {
     }, [])
     const getPokemonNames = () => {
         axios.het(`${BASE_URL}`)
-        .get((res) => {
-            setPokemonNames(res.data.results)
-        })
-        .catch((err) => {
-            console.log(error.message)
-        })
+            .get((res) => {
+                console.log(res.data.result)
+                setPokemonNames(res.data.results)
+            })
+            .catch((err) => {
+                console.log(err.message)
+            })
     }
 
     useEffect(() => {
         const newList = []
         pokemonNames.forEach((element) => {
             axios.get(element.url)
-            .then((res) => {
-                newList.push(res.data)
-                if(newList.length === 20){
-                    const orderList = newList.sort((a,b) => {
-                        return a.id - b.id
-                    })
-                    setPokemons(orderList)
-                }
+                .then((res) => {
+                    newList.push(res.data)
+                    console.log(newList)
+                    if (newList.length === 20) {
+                        const orderList = newList.sort((a, b) => {
+                            return a.id - b.id
+                        })
+                        setPokemons(orderList)
+                    }
                 })
                 .catch((err) => {
                     console.log(err.message)
                 })
-            })
-        }, [pokemonNames]);
+        })
+    }, [pokemonNames]);
 
-        const data = { pokemons, setPokemons, pokedex, setPokedex }
+    const data = { pokemons, setPokemons, pokedex, setPokedex }
 
-        return (
+    return (
         <GlobalStateContext.provider value={data}>
             {props.children}
         </GlobalStateContext.provider>
-    })
-}
+    )
+}   
 
 export default GlobalState

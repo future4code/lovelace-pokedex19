@@ -23,7 +23,7 @@ const PokemonDetailPage = () => {
       <Header />
       {pokemon.name && <h1>{pokemon.name}</h1>}
       {pokemon.sprites && pokemon.sprites.front_default && (
-        <img src={pokemon.sprites.front_default} />
+        <img src={pokemon.sprites.front_default} alt={"pokemon"} />
       )}
       <button onClick={goToListPage}>Voltar</button>
       <Footer />
